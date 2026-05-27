@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AFA Artur Martorell</title>
+  <desc id="desc">Imatge social de l'AFA Artur Martorell</desc>
+  <rect width="1200" height="630" fill="#FDF9EF"/>
+  <path d="M0 460C160 402 280 412 420 455s292 88 458 22 245-156 322-140v293H0Z" fill="#91E690"/>
+  <g transform="translate(96 124)">
+    <path d="M98 0 196 174H0Z" fill="#91E690"/>
+    <path d="M324 0 422 174H226Z" fill="#91E690"/>
+    <text x="215" y="170" font-family="Arial, Helvetica, sans-serif" font-size="190" font-weight="800" fill="#075BEA">F</text>
+  </g>
+  <text x="575" y="244" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="800" fill="#075BEA">AFA</text>
+  <text x="575" y="330" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="800" fill="#075BEA">Artur Martorell</text>
+  <text x="575" y="394" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#111827">Famílies que fan escola</text>
+</svg>
