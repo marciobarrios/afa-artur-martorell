@@ -1,7 +1,4 @@
-import Link from "next/link";
 import { Menu } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
 import { NavLinks } from "./nav-links";
 import { ThemeToggle } from "./theme-toggle";
@@ -16,15 +13,6 @@ export function SiteHeader() {
         </nav>
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Link
-            className={cn(
-              buttonVariants({ variant: "default", size: "sm" }),
-              "hidden sm:inline-flex",
-            )}
-            href="/contacte"
-          >
-            Participa
-          </Link>
           <details className="relative lg:hidden">
             <summary className="focus-ring inline-flex size-10 cursor-pointer list-none items-center justify-center rounded-md transition-[background-color,color] duration-200 hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/15 [&::-webkit-details-marker]:hidden">
               <Menu aria-hidden="true" className="size-5" />

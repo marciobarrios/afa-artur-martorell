@@ -45,45 +45,47 @@ export default async function Home() {
   return (
     <>
       <section className="relative overflow-hidden border-b">
-        <div className="mx-auto grid min-h-[calc(100svh-4rem)] max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
-          <div className="max-w-3xl">
-            <Badge variant="secondary">Famílies que fan escola</Badge>
-            <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.02] tracking-normal sm:text-7xl">
-              Fem comunitat, cuidem l'escola
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
-              Representem els interessos de les famílies i col·laborem amb l'escola perquè infants,
-              mestres i comunitat tinguin un espai viu, cuidat i participatiu.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                className={buttonVariants({ variant: "default", size: "lg" })}
-                href="/comissions"
-              >
-                Veure comissions
-                <ArrowRight aria-hidden="true" />
-              </Link>
+        <div className="mx-auto flex min-h-[calc(100svh-4rem)] max-w-7xl flex-col justify-center gap-10 px-4 py-12 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="max-w-3xl">
+              <Badge variant="secondary">Famílies que fan escola</Badge>
+              <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.02] tracking-normal sm:text-7xl">
+                Fem comunitat, cuidem l'escola
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
+                Representem els interessos de les famílies i col·laborem amb l'escola perquè
+                infants, mestres i comunitat tinguin un espai viu, cuidat i participatiu.
+              </p>
+            </div>
+            <div className="relative mx-auto w-full max-w-xl">
+              <div className="absolute inset-x-8 top-10 h-56 rounded-full bg-secondary/25 blur-3xl" />
+              <Image
+                src="/logos/afa-imagotype.svg"
+                alt="AFA Artur Martorell"
+                width={914}
+                height={490}
+                priority
+                className="relative mx-auto h-auto w-full max-w-lg"
+              />
             </div>
           </div>
-          <div className="relative mx-auto w-full max-w-xl">
-            <div className="absolute inset-x-8 top-10 h-56 rounded-full bg-secondary/25 blur-3xl" />
-            <Image
-              src="/logos/afa-imagotype.svg"
-              alt="AFA Artur Martorell"
-              width={914}
-              height={490}
-              priority
-              className="relative mx-auto h-auto w-full max-w-lg"
-            />
-            <div className="relative mt-8 grid gap-3 sm:grid-cols-2">
-              {actionCards.map((item) => (
-                <div className="rounded-lg border bg-card/80 p-4 shadow-sm" key={item.title}>
-                  <item.icon aria-hidden="true" className="mb-3 size-5 text-primary" />
-                  <h2 className="font-bold">{item.title}</h2>
-                  <p className="mt-1 text-sm leading-6 text-muted-foreground">{item.description}</p>
-                </div>
-              ))}
-            </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {actionCards.map((item) => (
+              <div className="rounded-lg border bg-card/80 p-4 shadow-sm" key={item.title}>
+                <item.icon aria-hidden="true" className="mb-3 size-5 text-primary" />
+                <h2 className="font-bold">{item.title}</h2>
+                <p className="mt-1 text-sm leading-6 text-muted-foreground">{item.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Link className={buttonVariants({ variant: "default", size: "lg" })} href="/comissions">
+              Veure comissions
+              <ArrowRight aria-hidden="true" />
+            </Link>
+            <Link className={buttonVariants({ variant: "outline", size: "lg" })} href="/contacte">
+              Participa
+            </Link>
           </div>
         </div>
       </section>
