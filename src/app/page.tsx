@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Camera, HeartHandshake, Leaf, Megaphone, School, Soup } from "lucide-react";
+import { ArrowRight, Camera, Code2, HeartHandshake, Megaphone, School, Soup } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -119,69 +119,95 @@ export default async function Home() {
       </section>
 
       <section className="border-y bg-card/50">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_1fr] lg:px-8">
-          <Card className="bg-primary text-primary-foreground">
-            <CardHeader>
-              <Badge className="border-white/20 bg-white/15 text-white">Menús menjador</Badge>
-              <CardTitle className="text-3xl">
-                {latestMenu ? getDisplayMonth(latestMenu) : "Menú pendent"}
-              </CardTitle>
-              <CardDescription className="text-primary-foreground/80">
-                Consulta el menú mensual i el dinar d'avui quan hi ha dades publicades.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              {todayLunch ? (
-                <ul className="grid gap-2 text-sm leading-6">
-                  {todayLunch.dishes.map((dish) => (
-                    <li key={dish}>{dish}</li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-sm leading-6 text-primary-foreground/80">
-                  No hi ha menú d'avui carregat encara. Pots veure el mes disponible a la pàgina de
-                  menús.
-                </p>
-              )}
-              <Link
-                className={cn(buttonVariants({ variant: "secondary" }), "mt-6")}
-                href="/menus-menjador"
-              >
-                Obrir menús
-              </Link>
-            </CardContent>
-          </Card>
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mb-8 max-w-3xl">
+            <Badge variant="secondary">Novetats</Badge>
+            <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.05] tracking-normal">
+              Al dia de l'AFA
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-muted-foreground">
+              Menús, avisos i publicacions recents per tenir a mà el que passa a l'escola.
+            </p>
+          </div>
 
-          <Card>
-            <CardHeader>
-              <Badge variant="secondary">
-                <Camera aria-hidden="true" className="size-3.5" />
-                Instagram
-              </Badge>
-              <CardTitle className="text-3xl">Segueix el dia a dia de l'AFA</CardTitle>
-              <CardDescription>
-                A Instagram compartim avisos, activitats, crides a participar i novetats
-                relacionades amb l'AFA i l'escola.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm leading-6 text-muted-foreground">
-                És el canal més immediat per estar al corrent de les notícies, recordatoris i
-                moments compartits de la comunitat educativa.
-              </p>
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <a
-                  className={buttonVariants({ variant: "default" })}
-                  href={site.instagramUrl}
-                  rel="noreferrer"
-                  target="_blank"
+          <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
+            <Card className="border-none bg-primary text-primary-foreground">
+              <CardHeader>
+                <Badge className="border-primary-foreground/45 bg-primary-foreground/15 text-primary-foreground dark:border-primary-foreground/55 dark:bg-primary-foreground/12">
+                  Menús menjador
+                </Badge>
+                <CardTitle className="text-3xl">
+                  {latestMenu ? getDisplayMonth(latestMenu) : "Menú pendent"}
+                </CardTitle>
+                <CardDescription className="text-primary-foreground/80">
+                  Consulta el menú mensual i el dinar d'avui quan hi ha dades publicades.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                {todayLunch ? (
+                  <div>
+                    <div className="mb-3 inline-flex items-center gap-2 text-sm font-bold">
+                      <Soup aria-hidden="true" className="size-4" />
+                      Dinar d'avui
+                    </div>
+                    <ul className="grid gap-0.5 text-sm leading-5">
+                      {todayLunch.dishes.map((dish) => (
+                        <li className="flex items-start gap-2 py-0.5 pl-2.5" key={dish}>
+                          <span
+                            aria-hidden="true"
+                            className="mt-2 size-1.5 shrink-0 rounded-full bg-secondary"
+                          />
+                          <span>{dish}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : (
+                  <p className="text-sm leading-6 text-primary-foreground/80">
+                    No hi ha menú d'avui carregat encara. Pots veure el mes disponible a la pàgina
+                    de menús.
+                  </p>
+                )}
+                <Link
+                  className={cn(buttonVariants({ variant: "secondary" }), "mt-6")}
+                  href="/menus-menjador"
                 >
-                  Obrir Instagram
-                  <ArrowRight aria-hidden="true" />
-                </a>
-              </div>
-            </CardContent>
-          </Card>
+                  Obrir menús
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <Badge variant="secondary">
+                  <Camera aria-hidden="true" className="size-3.5" />
+                  Instagram
+                </Badge>
+                <CardTitle className="text-3xl">Segueix el dia a dia de l'AFA</CardTitle>
+                <CardDescription>
+                  A Instagram compartim avisos, activitats, crides a participar i novetats
+                  relacionades amb l'AFA i l'escola.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm leading-6 text-muted-foreground">
+                  És el canal més immediat per estar al corrent de les notícies, recordatoris i
+                  moments compartits de la comunitat educativa.
+                </p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    className={buttonVariants({ variant: "default" })}
+                    href={site.instagramUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Obrir Instagram
+                    <ArrowRight aria-hidden="true" />
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -212,14 +238,30 @@ export default async function Home() {
       <section className="border-t bg-secondary/20">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
           <div>
-            <Leaf aria-hidden="true" className="mb-4 size-8 text-primary" />
-            <h2 className="font-display text-4xl font-semibold">Contingut fàcil de mantenir.</h2>
+            <Code2 aria-hidden="true" className="mb-4 size-8 text-primary" />
+            <h2 className="font-display text-4xl font-semibold">Codi obert per a altres AFA.</h2>
           </div>
-          <p className="text-lg leading-8 text-muted-foreground">
-            Les pàgines, comissions i menús viuen en fitxers markdown i JSON dins de GitHub. Això
-            permet revisar canvis abans de publicar i deixa el projecte preparat per afegir un CMS
-            visual més endavant si l'equip ho necessita.
-          </p>
+          <div>
+            <p className="text-lg leading-8 text-muted-foreground">
+              Aquest web és lliure i reutilitzable: qualsevol AFA pot copiar el projecte, adaptar-lo
+              a la seva escola i aprofitar-ne el codi. Si us pot servir, també us podem ajudar de
+              franc a posar-lo en marxa.
+            </p>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <a
+                className={buttonVariants({ variant: "default" })}
+                href="https://github.com/marciobarrios/afa-artur-martorell"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Veure el codi a GitHub
+                <ArrowRight aria-hidden="true" />
+              </a>
+              <Link className={buttonVariants({ variant: "outline" })} href="/contacte">
+                Demanar ajuda
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>
