@@ -6,21 +6,17 @@ export function Logo({ className }: { className?: string }) {
   return (
     <Link
       href="/"
-      className={cn("focus-ring inline-flex items-center gap-3 rounded-md", className)}
+      className={cn("focus-ring inline-flex items-center rounded-md", className)}
       aria-label="AFA Artur Martorell"
     >
       <Image
-        src="/logos/afa-mark-export.png"
+        src="/logos/afa-logo.svg"
         alt=""
-        width={44}
-        height={44}
-        className="size-11"
+        width={1716}
+        height={112}
+        className="h-auto w-44 sm:w-64"
         priority
       />
-      <span className="hidden leading-none sm:block">
-        <span className="block text-sm font-black tracking-wide text-primary">AFA</span>
-        <span className="block text-sm font-bold tracking-wide">Artur Martorell</span>
-      </span>
     </Link>
   );
 }
