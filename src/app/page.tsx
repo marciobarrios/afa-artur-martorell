@@ -49,7 +49,7 @@ export default async function Home() {
           <div className="max-w-3xl">
             <Badge variant="secondary">Famílies que fan escola</Badge>
             <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.02] tracking-normal sm:text-7xl">
-              AFA Artur Martorell
+              Fem comunitat, cuidem l'escola
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
               Representem els interessos de les famílies i col·laborem amb l'escola perquè infants,
@@ -63,36 +63,26 @@ export default async function Home() {
                 Veure comissions
                 <ArrowRight aria-hidden="true" />
               </Link>
-              <Link
-                className={buttonVariants({ variant: "outline", size: "lg" })}
-                href="/menus-menjador"
-              >
-                Menús menjador
-              </Link>
             </div>
           </div>
           <div className="relative mx-auto w-full max-w-xl">
-            <div className="absolute inset-8 rounded-full bg-secondary/30 blur-3xl" />
-            <div className="relative rounded-lg border bg-card p-6 shadow-xl">
-              <Image
-                src="/logos/afa-horizontal-export.png"
-                alt="AFA Artur Martorell"
-                width={1880}
-                height={480}
-                priority
-                className="h-auto w-full"
-              />
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                {actionCards.map((item) => (
-                  <div className="rounded-lg border bg-background/70 p-4" key={item.title}>
-                    <item.icon aria-hidden="true" className="mb-3 size-5 text-primary" />
-                    <h2 className="font-bold">{item.title}</h2>
-                    <p className="mt-1 text-sm leading-6 text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+            <div className="absolute inset-x-8 top-10 h-56 rounded-full bg-secondary/25 blur-3xl" />
+            <Image
+              src="/logos/afa-imagotype.svg"
+              alt="AFA Artur Martorell"
+              width={914}
+              height={490}
+              priority
+              className="relative mx-auto h-auto w-full max-w-lg"
+            />
+            <div className="relative mt-8 grid gap-3 sm:grid-cols-2">
+              {actionCards.map((item) => (
+                <div className="rounded-lg border bg-card/80 p-4 shadow-sm" key={item.title}>
+                  <item.icon aria-hidden="true" className="mb-3 size-5 text-primary" />
+                  <h2 className="font-bold">{item.title}</h2>
+                  <p className="mt-1 text-sm leading-6 text-muted-foreground">{item.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -110,7 +100,7 @@ export default async function Home() {
               pàgina completa manté el text editable perquè l'equip el pugui ampliar amb exemples,
               serveis i informació actualitzada.
             </p>
-            <Link className={cn(buttonVariants({ variant: "default" }), "mt-6")} href="/que-fem">
+            <Link className={cn(buttonVariants({ variant: "outline" }), "mt-6")} href="/que-fem">
               Obrir Què fem
               <ArrowRight aria-hidden="true" />
             </Link>
