@@ -29,11 +29,11 @@ export function NavLinks({ mobile = false }: { mobile?: boolean }) {
           <Link
             aria-current={active ? "page" : undefined}
             className={cn(
-              "focus-ring rounded-md text-sm font-semibold transition",
+              "focus-ring rounded-md text-sm font-semibold transition-[background-color,color,box-shadow] duration-200",
               mobile ? "px-3 py-2" : "px-3 py-2",
               active
-                ? "bg-primary/10 text-primary ring-1 ring-primary/15"
-                : "text-muted-foreground hover:bg-muted hover:text-foreground",
+                ? "bg-primary/10 text-primary ring-1 ring-primary/20 dark:bg-primary/15 dark:ring-primary/35"
+                : "text-muted-foreground hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/15",
             )}
             href={item.href}
             key={item.href}

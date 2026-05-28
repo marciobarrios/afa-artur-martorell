@@ -35,7 +35,7 @@ export default async function MenusMenjadorPage({
             title="Dinars i sopars del mes."
             description="V1 mostra menús guardats com a JSON revisable a GitHub. El següent pas serà automatitzar la importació dels PDFs d'Àmbit Escola."
           />
-          <Card className="mt-8 border-primary/25 bg-primary/5">
+          <Card className="mt-8 border-primary/30 bg-primary/5 dark:border-primary/45 dark:bg-primary/12">
             <CardContent className="p-5">
               <div className="flex gap-3">
                 <AlertCircle aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-primary" />

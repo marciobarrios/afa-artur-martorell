@@ -21,7 +21,8 @@ function MenuGrid({ entries, today }: { entries: DailyMenu[]; today?: number }) 
         <article
           className={cn(
             "rounded-lg border bg-card p-4 shadow-sm",
-            today === entry.day && "border-primary bg-primary/5 ring-2 ring-primary/15",
+            today === entry.day &&
+              "border-primary/35 bg-primary/5 ring-2 ring-primary/18 dark:border-primary/50 dark:bg-primary/12 dark:ring-primary/28",
           )}
           key={entry.day}
         >
@@ -48,13 +49,13 @@ export function MenuTabs({ menu, today }: { menu: MonthMenus; today?: number }) 
     <Tabs.Root className="space-y-5" defaultValue="lunch">
       <Tabs.List className="inline-flex rounded-lg border bg-card p-1 shadow-sm">
         <Tabs.Tab
-          className="cursor-pointer rounded-md px-4 py-2 text-sm font-bold text-muted-foreground outline-none transition hover:bg-muted hover:text-foreground data-selected:bg-primary data-selected:text-primary-foreground data-selected:shadow-sm focus-visible:ring-2 focus-visible:ring-ring"
+          className="cursor-pointer rounded-md px-4 py-2 text-sm font-bold text-muted-foreground outline-none transition-[background-color,color,box-shadow] duration-200 hover:bg-primary/10 hover:text-primary data-selected:bg-primary data-selected:text-primary-foreground data-selected:shadow-sm focus-visible:ring-2 focus-visible:ring-ring dark:hover:bg-primary/15"
           value="lunch"
         >
           Dinar
         </Tabs.Tab>
         <Tabs.Tab
-          className="cursor-pointer rounded-md px-4 py-2 text-sm font-bold text-muted-foreground outline-none transition hover:bg-muted hover:text-foreground data-selected:bg-primary data-selected:text-primary-foreground data-selected:shadow-sm focus-visible:ring-2 focus-visible:ring-ring"
+          className="cursor-pointer rounded-md px-4 py-2 text-sm font-bold text-muted-foreground outline-none transition-[background-color,color,box-shadow] duration-200 hover:bg-primary/10 hover:text-primary data-selected:bg-primary data-selected:text-primary-foreground data-selected:shadow-sm focus-visible:ring-2 focus-visible:ring-ring dark:hover:bg-primary/15"
           value="dinner"
         >
           Sopar

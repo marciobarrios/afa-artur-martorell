@@ -26,7 +26,7 @@ export function SiteHeader() {
             Participa
           </Link>
           <details className="relative lg:hidden">
-            <summary className="focus-ring inline-flex size-10 cursor-pointer list-none items-center justify-center rounded-md hover:bg-muted [&::-webkit-details-marker]:hidden">
+            <summary className="focus-ring inline-flex size-10 cursor-pointer list-none items-center justify-center rounded-md transition-[background-color,color] duration-200 hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/15 [&::-webkit-details-marker]:hidden">
               <Menu aria-hidden="true" className="size-5" />
               <span className="sr-only">Obre el menú</span>
             </summary>

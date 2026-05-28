@@ -1,14 +1,21 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Monitor, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
 export function ThemeToggle() {
   const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  const nextTheme = theme === "light" ? "dark" : theme === "dark" ? "system" : "light";
-  const Icon = theme === "light" ? Moon : theme === "dark" ? Monitor : Sun;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const activeTheme = mounted ? theme : "system";
+  const nextTheme = activeTheme === "light" ? "dark" : activeTheme === "dark" ? "system" : "light";
+  const Icon = activeTheme === "light" ? Moon : activeTheme === "dark" ? Monitor : Sun;
 
   return (
     <Button
