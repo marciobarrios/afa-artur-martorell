@@ -3,7 +3,7 @@ import { findDailyMenu, getDisplayMonth, getMadridDateParts } from "../src/lib/m
 
 describe("menu helpers", () => {
   it("formats Catalan month names", () => {
-    expect(getDisplayMonth({ year: 2026, month: 5 })).toBe("maig 2026");
+    expect(getDisplayMonth({ year: 2026, month: 5 })).toBe("Maig 2026");
   });
 
   it("uses Europe/Madrid for the current day", () => {

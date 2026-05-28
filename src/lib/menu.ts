@@ -93,7 +93,9 @@ export const getMenuForMonth = cache((year: number, month: number) => {
 });
 
 export function getDisplayMonth(menu: Pick<MonthMenus, "month" | "year">) {
-  return `${catalanMonths[menu.month - 1]} ${menu.year}`;
+  const month = catalanMonths[menu.month - 1];
+
+  return `${month.charAt(0).toUpperCase()}${month.slice(1)} ${menu.year}`;
 }
 
 export function findDailyMenu(menu: MonthMenus, type: "lunch" | "dinner", day: number) {
