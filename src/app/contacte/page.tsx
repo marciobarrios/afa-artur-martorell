@@ -56,7 +56,14 @@ export default function ContactePage() {
           <CardContent className="p-5">
             <MapPin aria-hidden="true" className="mb-4 size-6 text-primary" />
             <h2 className="font-bold">Escola</h2>
-            <p className="mt-2 text-sm leading-6 text-muted-foreground">{site.address}</p>
+            <a
+              className="mt-2 block text-sm leading-6 text-muted-foreground hover:text-primary"
+              href={site.mapsUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              {site.address}
+            </a>
           </CardContent>
         </Card>
       </div>

@@ -17,6 +17,7 @@ const siteSchema = z.object({
   instagramUrl: z.url(),
   schoolName: z.string(),
   address: z.string(),
+  mapsUrl: z.url(),
 });
 
 const pageSchema = z.object({

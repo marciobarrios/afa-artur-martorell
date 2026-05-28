@@ -45,10 +45,15 @@ export function SiteFooter() {
               <Camera aria-hidden="true" className="mt-0.5 size-4" />
               Instagram AFA
             </a>
-            <span className="inline-flex items-start gap-2">
+            <a
+              className="inline-flex items-start gap-2 hover:text-primary"
+              href={site.mapsUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
               <MapPin aria-hidden="true" className="mt-0.5 size-4" />
               {site.address}
-            </span>
+            </a>
           </div>
         </div>
       </div>
