@@ -1,0 +1,247 @@
+{
+  "year": 2026,
+  "month": 2,
+  "lunch": [
+    {
+      "day": 2,
+      "dishes": [
+        "Arròs integral amb ceba i tomàquet",
+        "Daus de gall dindi amb saltejat d'alls tendres",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 3,
+      "dishes": [
+        "Llenties estofades amb verdures de temporada",
+        "Salsitxes de pollastre amb enciam i olives",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 4,
+      "dishes": [
+        "Espincas gratinats al forn amb beixamel",
+        "Truita de patata amb enciam i col rave",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 5,
+      "dishes": [
+        "Macarrons amb tomàquet i ceba",
+        "Contracuixa de pollastre amb patates al forn",
+        "Iogurt natural La Selvatana"
+      ]
+    },
+    {
+      "day": 6,
+      "dishes": [
+        "Sopa de brou vegetal amb mill i cigrons",
+        "Lluç enfarinat al forn amb enciam i remolatxa",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 9,
+      "dishes": [
+        "Arròs tres delícies amb pastanga, olives i col lombarda",
+        "Fricandó de vedella",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 10,
+      "dishes": [
+        "Espirals integrals amb oli d'alfàbrega i formatge ratllat",
+        "Truita d'alls tendres amb enciam i ravanets",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 11,
+      "dishes": [
+        "Rostit de col i patata",
+        "Pollastre arrebossat amb enciam i pastanaga",
+        "Iogurt natural La Selvatana"
+      ]
+    },
+    {
+      "day": 12,
+      "dishes": [
+        "Cigrons estofats amb verdures de temporada",
+        "Calamars casolans al forn amb enciam i olives",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 13,
+      "dishes": [
+        "Crema de verdures de temporada",
+        "Llenties estofades amb arròs",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 17,
+      "dishes": [
+        "Espaguetis a la bolonyesa de llenties",
+        "Pernilets de pollastre a la taronja",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 18,
+      "dishes": [
+        "Arròs a la cassola amb verdures de temporada i bròquil",
+        "Bunyols de peix amb raves i olives",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 19,
+      "dishes": [
+        "Trinxat de col amb mongeta blanca, carbassa i oli d'oliva",
+        "Truita de formatge amb enciam i olives",
+        "Iogurt natural La Selvatana"
+      ]
+    },
+    {
+      "day": 20,
+      "dishes": [
+        "Cigrons al curry",
+        "Botifarra de porc amb enciam i remolatxa",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 23,
+      "dishes": [
+        "Sopa de brou d'au amb fideus",
+        "Salmó al forn amb ceba confitada",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 24,
+      "dishes": [
+        "Bledes amb pastanaga i alls tendres",
+        "Contracuixa de pollastre al forn amb enciam i pastanaga",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 25,
+      "dishes": [
+        "Crema de carbassa",
+        "Mandonguilles vegetals guisades amb mongeta blanca",
+        "Fruita de temporada"
+      ]
+    },
+    {
+      "day": 26,
+      "dishes": ["Paella de pollastre", "Amanida variada completa", "Iogurt natural La Selvatana"]
+    }
+  ],
+  "dinner": [
+    {
+      "day": 2,
+      "dishes": ["Espaguetis a la napolitana", "Remenat d'espàrrecs, alls tendres i gambetes"]
+    },
+    {
+      "day": 3,
+      "dishes": ["Amanida d'endívies, olives i tomàquets secs", "Estofat de patata i sípia"]
+    },
+    {
+      "day": 4,
+      "dishes": [
+        "Crema de pastanaga, nap, ceba i xirivía",
+        "Pollastre arrebossat al forn amb col riçada"
+      ]
+    },
+    {
+      "day": 5,
+      "dishes": [
+        "Amanida d'espinacs baby, mandarina i vinagreta de mel i mostassa",
+        "Risotto de carbassa amb parmesà"
+      ]
+    },
+    {
+      "day": 6,
+      "dishes": ["Pa nan casolà", "Curry indi de llenties amb verduretes"]
+    },
+    {
+      "day": 9,
+      "dishes": ["Crema de porros i pera", "Gall dindi al forn amb ceba i pastanaga"]
+    },
+    {
+      "day": 10,
+      "dishes": [
+        "Arròs integral amb verduretes",
+        "Guisat de pollastre amb ceba, cúrcuma i brou de verdures"
+      ]
+    },
+    {
+      "day": 11,
+      "dishes": ["Amanida de fulla verda amb taronja i fruits secs", "Estofat de llenties i xoriço"]
+    },
+    {
+      "day": 12,
+      "dishes": ["Flors de carxofa amb pernil", "Truita de patata amb amanida de rúcula"]
+    },
+    {
+      "day": 13,
+      "dishes": [
+        "Quiche de verdures (espàrrecs, carbassa, ceba, porro...) ous, crema de llet, mantega i formatge com a plat únic"
+      ]
+    },
+    {
+      "day": 17,
+      "dishes": [
+        "Crema de carbassa",
+        "Sardines al forn amb julivert, orenga, llimona, tomàquets cherri i oli d'oliva"
+      ]
+    },
+    {
+      "day": 18,
+      "dishes": ["Amanida xató", "Truita de ceba i boniato"]
+    },
+    {
+      "day": 19,
+      "dishes": ["Espinacs a la catalana", "Pollastre al forn amb patates"]
+    },
+    {
+      "day": 20,
+      "dishes": ["Coca de recapte", "Truita d'alls tendres i mongetes blanques baby"]
+    },
+    {
+      "day": 23,
+      "dishes": [
+        "Trinxat de la cerdanya amb col patata i cansalada",
+        "Pollastre a la planxa amb ceba caramelitzada"
+      ]
+    },
+    {
+      "day": 24,
+      "dishes": ["Crema de col lombarda, patata i poma i ou dur ratllat", "Canelons d'espinacs"]
+    },
+    {
+      "day": 25,
+      "dishes": ["Mongeta verda amb patata i cigons", "Lluç enfarinat al forn"]
+    },
+    {
+      "day": 26,
+      "dishes": [
+        "Amanida de fulla de roure amb pastanaga ratllada i vinagreta",
+        "Cigrons estofats amb pollastre"
+      ]
+    },
+    {
+      "day": 27,
+      "dishes": [
+        "Amanida d'espinacs baby i rúcula amb poma i vinagreta",
+        "Hamburguesa de vedella amb patates fregides"
+      ]
+    }
+  ]
+}
