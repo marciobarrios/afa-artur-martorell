@@ -28,14 +28,16 @@ export default async function MenusMenjadorPage({
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-      <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr]">
+      <SectionHeading
+        className="max-w-none"
+        eyebrow="Menús menjador"
+        title="Dinars i sopars del mes."
+        description="Consulta els dinars i sopars de cada mes, canvia de mes quan ho necessitis i revisa els plats previstos per a cada dia lectiu."
+      />
+
+      <div className="mt-10 grid gap-8 lg:grid-cols-[0.78fr_1.22fr]">
         <aside>
-          <SectionHeading
-            eyebrow="Menús menjador"
-            title="Dinars i sopars del mes."
-            description="Consulta els dinars i sopars de cada mes, canvia de mes quan ho necessitis i revisa els plats previstos per a cada dia lectiu."
-          />
-          <Card className="mt-8 border-primary/30 bg-primary/5 dark:border-primary/45 dark:bg-primary/12">
+          <Card className="border-primary/30 bg-primary/5 dark:border-primary/45 dark:bg-primary/12">
             <CardContent className="p-5">
               <div className="flex items-center gap-2">
                 <BarChart3 aria-hidden="true" className="size-5 text-primary" />
