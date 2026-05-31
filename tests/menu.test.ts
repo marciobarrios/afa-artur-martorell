@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { getDisplayMenuDay } from "../src/lib/menu-dates";
 import { findDailyMenu, getDisplayMonth, getMadridDateParts } from "../src/lib/menu";
 
 describe("menu helpers", () => {
@@ -10,6 +11,11 @@ describe("menu helpers", () => {
     const madrid = getMadridDateParts(new Date("2026-05-24T22:30:00.000Z"));
 
     expect(madrid).toEqual({ year: 2026, month: 5, day: 25 });
+  });
+
+  it("formats menu days with Catalan weekdays", () => {
+    expect(getDisplayMenuDay({ year: 2026, month: 6 }, 1)).toBe("Dilluns 1");
+    expect(getDisplayMenuDay({ year: 2026, month: 6 }, 2)).toBe("Dimarts 2");
   });
 
   it("finds a daily menu by type and day", () => {
