@@ -159,10 +159,10 @@ export default async function Home() {
                   </p>
                 )}
                 <Link
-                  className={cn(buttonVariants({ variant: "default" }), "mt-6")}
+                  className={cn(buttonVariants({ variant: "default" }), "mt-6 w-full sm:w-fit")}
                   href="/menus-menjador"
                 >
-                  Obrir menús
+                  Obrir Menús
                 </Link>
               </CardContent>
             </Card>
