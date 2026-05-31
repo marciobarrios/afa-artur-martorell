@@ -123,31 +123,29 @@ export default async function Home() {
           </div>
 
           <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
-            <Card className="border-none bg-primary text-primary-foreground">
+            <Card className="border-primary/30 bg-primary/5 dark:border-primary/45 dark:bg-primary/12">
               <CardHeader>
-                <Badge className="border-primary-foreground/45 bg-primary-foreground/15 text-primary-foreground dark:border-primary-foreground/55 dark:bg-primary-foreground/12">
-                  Menús menjador
-                </Badge>
+                <Badge>Menús menjador</Badge>
                 <CardTitle className="text-3xl">
                   {latestMenu ? getDisplayMonth(latestMenu) : "Menú pendent"}
                 </CardTitle>
-                <CardDescription className="text-primary-foreground/80">
+                <CardDescription>
                   Consulta el menú mensual i el dinar d'avui quan hi ha dades publicades.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 {todayLunch ? (
                   <div>
-                    <div className="mb-3 inline-flex items-center gap-2 text-sm font-bold">
+                    <div className="mb-3 inline-flex items-center gap-2 text-sm font-bold text-primary">
                       <Soup aria-hidden="true" className="size-4" />
                       Dinar d'avui
                     </div>
-                    <ul className="grid gap-0.5 text-sm leading-5">
+                    <ul className="grid gap-0.5 text-sm leading-5 text-muted-foreground">
                       {todayLunch.dishes.map((dish) => (
                         <li className="flex items-start gap-2 py-0.5 pl-2.5" key={dish}>
                           <span
                             aria-hidden="true"
-                            className="mt-2 size-1.5 shrink-0 rounded-full bg-secondary"
+                            className="mt-2 size-1.5 shrink-0 rounded-full bg-primary"
                           />
                           <span>{dish}</span>
                         </li>
@@ -155,13 +153,13 @@ export default async function Home() {
                     </ul>
                   </div>
                 ) : (
-                  <p className="text-sm leading-6 text-primary-foreground/80">
+                  <p className="text-sm leading-6 text-muted-foreground">
                     No hi ha menú d'avui carregat encara. Pots veure el mes disponible a la pàgina
                     de menús.
                   </p>
                 )}
                 <Link
-                  className={cn(buttonVariants({ variant: "secondary" }), "mt-6")}
+                  className={cn(buttonVariants({ variant: "default" }), "mt-6")}
                   href="/menus-menjador"
                 >
                   Obrir menús
@@ -188,7 +186,7 @@ export default async function Home() {
                 </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <a
-                    className={buttonVariants({ variant: "default" })}
+                    className={buttonVariants({ variant: "outline" })}
                     href={site.instagramUrl}
                     rel="noreferrer"
                     target="_blank"
