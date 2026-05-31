@@ -56,7 +56,15 @@ function MenuGrid({
 const tabClassName =
   "h-10 cursor-pointer rounded-md px-4 text-sm font-bold text-muted-foreground outline-none transition-[background-color,color,box-shadow] duration-200 hover:bg-primary/10 hover:text-primary aria-selected:bg-primary aria-selected:text-primary-foreground aria-selected:shadow-sm focus-visible:ring-2 focus-visible:ring-ring dark:hover:bg-primary/15";
 
-export function MenuTabs({ menu, today }: { menu: MonthMenus; today?: number }) {
+export function MenuTabs({
+  menu,
+  showSourcePdf = true,
+  today,
+}: {
+  menu: MonthMenus;
+  showSourcePdf?: boolean;
+  today?: number;
+}) {
   return (
     <Tabs.Root className="space-y-5" defaultValue="lunch">
       <Tabs.List className="inline-flex rounded-lg border bg-card p-1 shadow-sm">
@@ -69,7 +77,7 @@ export function MenuTabs({ menu, today }: { menu: MonthMenus; today?: number }) 
       </Tabs.List>
       <Tabs.Panel value="lunch">
         <MenuGrid entries={menu.lunch} menu={menu} today={today} />
-        {menu.sourcePdf?.lunch ? (
+        {showSourcePdf && menu.sourcePdf?.lunch ? (
           <a
             className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline"
             href={menu.sourcePdf.lunch}
@@ -82,7 +90,7 @@ export function MenuTabs({ menu, today }: { menu: MonthMenus; today?: number }) 
       </Tabs.Panel>
       <Tabs.Panel value="dinner">
         <MenuGrid entries={menu.dinner} menu={menu} today={today} />
-        {menu.sourcePdf?.dinner ? (
+        {showSourcePdf && menu.sourcePdf?.dinner ? (
           <a
             className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline"
             href={menu.sourcePdf.dinner}

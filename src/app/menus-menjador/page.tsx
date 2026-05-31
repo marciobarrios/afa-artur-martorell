@@ -8,6 +8,11 @@ import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getAvailableMenus, getDisplayMonth, getMadridDateParts } from "@/lib/menu";
 
+const latestMenuSourcePdf = {
+  lunch: "https://www.ambitescola.cat/_menus/ArturMartorell-Basal.pdf",
+  dinner: "https://www.ambitescola.cat/_menus/ArturMartorell-Sopars.pdf",
+};
+
 export const metadata: Metadata = {
   title: "Menús menjador",
   description: "Consulta els menús de menjador de l'Escola Artur Martorell.",
@@ -22,9 +27,12 @@ export default async function MenusMenjadorPage({
   const menus = getAvailableMenus();
   const selectedMenu =
     menus.find((menu) => `${menu.year}-${String(menu.month).padStart(2, "0")}` === mes) ?? menus[0];
+  const latestMenu = menus[0];
   const today = getMadridDateParts();
   const selectedIsCurrent =
     selectedMenu?.year === today.year && selectedMenu?.month === today.month;
+  const selectedIsLatest =
+    selectedMenu?.year === latestMenu?.year && selectedMenu?.month === latestMenu?.month;
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
@@ -32,7 +40,7 @@ export default async function MenusMenjadorPage({
         className="max-w-none"
         eyebrow="Menús menjador"
         title="Dinars i sopars del mes."
-        description="Consulta els dinars i sopars de cada mes, canvia de mes quan ho necessitis i revisa els plats previstos per a cada dia lectiu."
+        description="Consulta els dinars de cada mes i les propostes de sopar que preparen els creadors del menú escolar per complementar-los a casa."
       />
 
       <div className="mt-10 grid gap-8 lg:grid-cols-[0.78fr_1.22fr]">
@@ -120,7 +128,18 @@ export default async function MenusMenjadorPage({
                 </h2>
                 {selectedIsCurrent ? <Badge>Mes actual</Badge> : null}
               </div>
-              <MenuTabs menu={selectedMenu} today={selectedIsCurrent ? today.day : undefined} />
+              <MenuTabs
+                menu={
+                  selectedIsLatest
+                    ? {
+                        ...selectedMenu,
+                        sourcePdf: latestMenuSourcePdf,
+                      }
+                    : selectedMenu
+                }
+                showSourcePdf={selectedIsLatest}
+                today={selectedIsCurrent ? today.day : undefined}
+              />
             </>
           ) : (
             <Card>
